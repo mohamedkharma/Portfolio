@@ -49,7 +49,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>MOHAMED KHARMA</motion.h2>
           <motion.h1 variants={textVariants}>
-            Full Stack Developer
+            Software Engineer 
           </motion.h1>
           <motion.h3>
             Building Seamless Experiences
@@ -74,7 +74,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Logical Creative Precision Problem Solver 
       </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
