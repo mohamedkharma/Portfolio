@@ -9,15 +9,13 @@ import Projects from "./components/projects/Projects";
 const App = () => {
   return <div>
     <section id="Homepage">
-      <Navbar/>
-      <Hero/>
+      <Navbar />
+      <Hero />
       </section>
     <section id="About"><Parallax type="about"/></section>
-    <section><About/></section>
+    <section><About /></section>
     <section id="Projects"><Parallax type="projects"/></section>
-    <section>Project1</section>
-    <section>Project2</section>
-    <section>Project3</section>
+    <Projects />
     <section id="Skills">Skills</section>
     <section id="Resume">Resume</section>
     <section id="Contact">Contact</section>

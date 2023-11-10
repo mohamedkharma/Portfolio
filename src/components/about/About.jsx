@@ -128,45 +128,45 @@ const About = () => {
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business
           </h1>
           <button>MY RESUME</button>
         </div>
       </motion.div>
       <motion.div className='listContainer'>
-        <div className='box'>
+        <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
           <h2>Projects</h2>
           <p>
             Porject Description
           </p>
           <button>GO</button>
-        </div>
+        </motion.div>
 
-        <div className='box'>
+        <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
           <h2>Skills</h2>
           <p>
             Porject Description
           </p>
           <button>GO</button>
-        </div>
+        </motion.div>
 
-        <div className='box'>
+        <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
           <h2>Education</h2>
           <p>
             Porject Description
           </p>
           <button>GO</button>
-        </div>
+        </motion.div>
 
-        <div className='box'>
+        <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
           <h2>Contact me</h2>
           <p>
             Porject Description
           </p>
           <button>GO</button>
-        </div>
+        </motion.div>
       </motion.div>
-      
+
     </motion.div>
   )
 }
