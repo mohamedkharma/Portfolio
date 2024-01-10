@@ -133,17 +133,18 @@ const About = () => {
           <button>MY RESUME</button>
         </div>
       </motion.div>
-      <motion.div className='listContainer'>
+
+      {/* <motion.div className='listContainer'>
         <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
-          <h2>Projects</h2>
+          <h2>FrontEnd</h2>
           <p>
-            Porject Description
+            put logos of react, vite, scss, css
           </p>
           <button>GO</button>
         </motion.div>
 
         <motion.div className='box' whileHover={{background:"lightgray", color: "black"}}>
-          <h2>Skills</h2>
+          <h2>Backend</h2>
           <p>
             Porject Description
           </p>
@@ -165,7 +166,7 @@ const About = () => {
           </p>
           <button>GO</button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
     </motion.div>
   )
