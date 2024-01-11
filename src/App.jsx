@@ -7,20 +7,21 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Projects from "./components/projects/Projects";
+import Resume from "./components/resume/Resume";
 
 const App = () => {
   return <div>
     <Cursor />
-    <section id="Homepage">
-      <Navbar />
-      <Hero />
-      </section>
+    <section id="Homepage"> 
+    <Navbar /> 
+    <Hero />
+    </section>
     <section id="About"><Parallax type="about"/></section>
     <section><About /></section>
     <section id="Projects"><Parallax type="projects"/></section>
     <Projects />
-    {/* <section id="Skills">Skills</section>
-    <section id="Resume">Resume</section> */}
+    <section id="Resume"><Resume /></section>
+    {/* <section id="Skills">Skills</section> */}
     <section id="Contact"><Contact /></section>
     {/* <MotionContainer/> */}
   </div>;

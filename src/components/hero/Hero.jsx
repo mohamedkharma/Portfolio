@@ -1,4 +1,5 @@
 import "./hero.scss";
+import React from "react";
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -38,6 +39,23 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const handleSeeLatestWorksClick = () => {
+    // Redirect to the page with the latest works when the button is clicked
+    window.location.href = "/#Projects"; // Replace "/latest-works" with your desired URL
+  };
+
+  const handleContactMeClick = () => {
+    // Redirect to the contact page when the button is clicked
+    window.location.href = "/#Contact"; // Replace "/contact" with your desired URL
+  };
+
+  const handleScrollButtonClick = () => {
+    // Scroll to the next page when the scroll button is clicked
+    // scroll.scrollTo("About");
+    window.location.href = "/#About"; // Replace "/contact" with your desired URL
+
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -55,13 +73,14 @@ const Hero = () => {
             </motion.h3>
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.button variants={textVariants} onClick={handleSeeLatestWorksClick}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={handleContactMeClick}>Contact Me</motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
+            onClick={handleScrollButtonClick}
             animate="scrollButton"
             src="/scroll.png"
             alt=""

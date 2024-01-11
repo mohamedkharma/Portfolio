@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./cursor.scss";
+import "./Cursor.scss";
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -17,11 +17,10 @@ const Cursor = () => {
     };
   }, []);
 
-  console.log(position)
   return (
     <motion.div
       className="cursor"
-      animate={{ x: position.x-20, y: position.y-20 }}
+      style={{ left: `${position.x}px`, top: `${position.y}px` }}
     ></motion.div>
   );
 };

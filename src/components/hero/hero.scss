@@ -18,6 +18,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      position: relative; // Ensure the container is a positioned element
 
       @include mobile {
         width: 100%;
@@ -46,15 +47,17 @@
       }
 
       h3 {
-          font-size: 60px; /* Adjusted for a more balanced size */
-          color: #555; /* Adjusted the color for better readability */
+        font-size: 60px;
+        color: #555;
 
-          @include mobile {
-            font-size: 20px;
-          }
+        @include mobile {
+          font-size: 20px;
+        }
       }
 
       .buttons {
+        display: flex;
+
         button {
           padding: 20px;
           border: 1px solid white;
@@ -64,6 +67,8 @@
           margin-right: 20px;
           cursor: pointer;
           font-weight: 300;
+          position: relative;
+          z-index: 2; // Ensure buttons have a higher z-index than sliding text
         }
       }
 
@@ -84,13 +89,11 @@
       height: 50%;
       top: unset;
       bottom: 0;
-      left: 50%; // Set left to 50% to center horizontally
-      transform: translateX(-50%); // Move back by half of its own width
-
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -105,5 +108,7 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+    z-index: 1; // Keep sliding text below buttons
+    pointer-events: none; // Disable pointer events on sliding text
   }
 }

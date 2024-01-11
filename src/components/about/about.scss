@@ -151,4 +151,28 @@
       }
     }
   }
+
+  .descriptionText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; /* Increase padding for more space */
+    text-align: center; /* Center the text */
+
+    @include mobile {
+      padding: 20px; /* Adjust padding for mobile */
+    }
+
+    p {
+      font-size: 24px; /* Increase font size for better readability */
+      font-weight: 300;
+      color: #fff; /* Use white color for text */
+      max-width: 800px;
+
+      @include mobile {
+        font-size: 17px; /* Adjust font size for mobile */
+      }
+    }
+  }
 }

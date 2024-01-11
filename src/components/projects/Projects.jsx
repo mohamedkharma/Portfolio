@@ -5,27 +5,31 @@ import './projects.scss'
 const items = [
   {
     id:1,
-    title:"Project name",
-    img:"https://plus.unsplash.com/premium_photo-1699292639215-6f34ff51daec?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Description",
+    title:"Walmart Sales Forecasting",
+    img:"/walmart.png",
+    desc: "This project focuses on sales forecasting for Walmart, employing machine learning models to predict weekly sales accurately. Sales forecasting is crucial for effective resource planning, decision-making, and identifying market trends. ",
+    repoLink: "https://github.com/mohamedkharma/Walmart-Sales-Forecasting-Using-Machine-Learning" // Add the GitHub repository link
   },
   {
     id:2,
-    title:"Project name2",
-    img:"https://plus.unsplash.com/premium_photo-1699292639215-6f34ff51daec?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Description",
+    title:"Zabegalovka",
+    img:"/Zabegalovka.png",
+    desc: "Zabegalovka is a restaurant website where people can order food",
+    repoLink: "https://github.com/mohamedkharma/Zabegalovka" // Add the GitHub repository link
   },
   {
     id:3,
-    title:"Project name3",
-    img:"https://plus.unsplash.com/premium_photo-1699292639215-6f34ff51daec?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Description",
+    title:"CryptoExplorer Pro",
+    img:"/CryptoExplorer.png",
+    desc: "An app that displays information about cryptocurrencies, such as their value, market cap, and percent change in value, which are accessed using API calls. An search bar is also implemented, which allows users to search for a specific currency. Used ReactRouter to create dynamic URLs for the app.",
+    repoLink: "https://github.com/mohamedkharma/CryptoExplorer-Pro/tree/main" // Add the GitHub repository link
   },
   {
     id:4,
-    title:"Project name4",
-    img:"https://plus.unsplash.com/premium_photo-1699292639215-6f34ff51daec?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Description",
+    title:"WeatherDash Pro",
+    img:"/WeatherDash.png",
+    desc: "A pro version of the web app WeatherDash. A data dashboard that show informations about the weather status and history of NYC",
+    repoLink: "https://github.com/mohamedkharma/WeatherDash-Pro/tree/main" // Add the GitHub repository link
   },
 ];
 
@@ -38,6 +42,11 @@ const Single = ({ item }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
+  const openDemo = () => {
+    // Open the GitHub repository link in a new tab/window
+    window.open(item.repoLink, "_blank");
+  };
+
   return (
     <section >
       <div className="container">
@@ -48,7 +57,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <button onClick={openDemo}>See Demo</button>
           </motion.div>
         </div>
       </div>

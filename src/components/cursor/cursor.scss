@@ -1,12 +1,15 @@
 @import "../../app.scss";
 
-.cursor{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid white;
+.cursor {
   position: fixed;
-  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  pointer-events: none; // Ensures that the cursor doesn't interfere with clicks on underlying elements
+  mix-blend-mode: difference; // Blend mode for better visibility on light and dark backgrounds
+  z-index: 9999; // Ensures the cursor is above other elements
 
   @include mobile{
     display: none;

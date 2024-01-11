@@ -12,13 +12,13 @@ const Navbar = () => {
                 animate={{opacity:1, scale:1}} 
                 transition={{duration:0.5}}
                 >
-                    Kharma Portfolio
+                    {/* Kharma Portfolio */}
             </motion.span>
             <div className="social">
+                <a href="https://www.linkedin.com/in/mohamed-kharma/"><img src="/linkedin.png" alt="" /></a>
+                <a href="https://github.com/mohamedkharma"><img src="/github-sign.png" alt="" /></a>
                 <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/facebook.png" alt="" /></a>
+                <a href="#"><img src="/instagram.png" alt="" /></a>
             </div>
         </div>
     </div>

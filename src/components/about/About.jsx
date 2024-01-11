@@ -105,6 +105,11 @@ const About = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  const handleResumeClick = () => {
+    // Redirect to the Resume page when the button is clicked
+    window.location.href = "/#Resume"; // Replace "/Resume" with your desired URL
+  };
+
   return (
     <motion.div 
     className='about'
@@ -130,8 +135,21 @@ const About = () => {
           <h1>
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business
           </h1>
-          <button>MY RESUME</button>
+          <button onClick={handleResumeClick}>MY RESUME</button>
         </div>
+      </motion.div>
+
+      <motion.div className='descriptionText' variants={variants}>
+        <h2> WHO AM I? </h2>
+        <p>
+          • I am a <strong>graduate student</strong> with a B.S. degree in Computer Science from The City College of New York.
+          <br />
+          • I have built up a <strong>strong repertoire of skills</strong> in multiple programming languages.
+          <br />
+          • I hold a <strong>strong command of technical and creative writing</strong>.
+          <br />
+          • I aspire to be a <strong>Software Engineer</strong>, but nonetheless, I am open to any role that would allow me to further apply my programming and technical skills.
+        </p>
       </motion.div>
 
       {/* <motion.div className='listContainer'>
